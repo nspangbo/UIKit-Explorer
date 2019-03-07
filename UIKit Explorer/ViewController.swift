@@ -34,6 +34,13 @@ class ViewController: UIViewController {
         setupSubView()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        let vc = StackViewController.init(nibName: nil, bundle: nil)
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
     fileprivate func setupData() {
         let items = ["NSLayoutAnchor", "UIStackView"]
         let itemClasses = [AutoLayoutAnchorViewController.self, StackViewController.self]

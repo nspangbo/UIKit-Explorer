@@ -12,8 +12,6 @@ class AutoLayoutAnchorViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
         
         view.backgroundColor = UIColor.white
         title = "NSAutoLayoutAnchor"
@@ -21,7 +19,7 @@ class AutoLayoutAnchorViewController: UIViewController {
         let layoutGuid = self.view.safeAreaLayoutGuide
         
         let redView = UIView.init()
-        redView.translatesAutoresizingMaskIntoConstraints = false // 使用自动布局时，关闭此属性
+        redView.translatesAutoresizingMaskIntoConstraints = false
         redView.backgroundColor = UIColor.red
         view.addSubview(redView)
         
@@ -41,15 +39,5 @@ class AutoLayoutAnchorViewController: UIViewController {
         blueView.centerXAnchor.constraint(equalTo: layoutGuid.centerXAnchor, constant: 0).isActive = true
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
